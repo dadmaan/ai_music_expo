@@ -11,7 +11,7 @@ The repository is structured to include individual folders for each model. Each 
 
 | Model Name      | Interface | Demo |
 |-----------------|-----------|------|
-| MusicGen        | \checkmark |      |
+| MusicGen        | :white_check_mark: |      |
 | M2UGen          |           |      |
 | AudioGen        |           |      |
 | MuseCoco        |           |      |
