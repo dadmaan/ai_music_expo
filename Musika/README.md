@@ -1,3 +1,5 @@
+# Running Musika with Docker
+
 1. Clone the [Musika](https://github.com/marcoppasini/musika) here and rename it to "repo".
 2. Open a terminal and run `docker compose up --build -d`
 3. Enter the running container with an interactve bash shell `docker-compose exec musika-notebook /bin/bash`
