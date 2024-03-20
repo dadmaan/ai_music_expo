@@ -4,4 +4,5 @@
 4. Once inside the container's bash shell, run "python musika_test.py". 
 
 Notes:
- 1. To ensure that the Gradio app is accessible from outside the Docker container, you need to make sure that iface.launch() (located in utils.py) is called with the server_name='0.0.0.0' argument. This will make the Gradio server listen on all network interfaces inside the container, allowing external access through the mapped port.
+1. To ensure that the Gradio app is accessible from outside the Docker container, you need to make sure that iface.launch() (located in utils.py) is called with the server_name='0.0.0.0' argument. This will make the Gradio server listen on all network interfaces inside the container, allowing external access through the mapped port.
+2. See [here](https://huggingface.co/musika) for model checkpoints.
