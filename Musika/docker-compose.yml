@@ -5,11 +5,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: musika-app
+    image: musika
     ports:
       - "8888:8888"
-    # volumes:
-      # - "./notebooks:/usr/src/app/musika"
+      - "7860:7860"
+    volumes:
+      - "./repo:/usr/src/app/musika"
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
     deploy:

@@ -10,7 +10,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Clone the specified GitHub repository
-RUN git clone https://github.com/marcoppasini/musika.git
+# RUN git clone https://github.com/marcoppasini/musika.git
 
 # Change the working directory to the cloned repository
 WORKDIR /usr/src/app/musika
@@ -20,6 +20,11 @@ COPY requirements_1.txt ./
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements_1.txt
+
+# If necessary, update typing_extensions to a version that includes 'deprecated'
+RUN pip install --no-cache-dir --upgrade typing_extensions
+
+EXPOSE 8888 7860
 
 # Adding a user to prevent permission problem later and inconsistency
 # src: https://vsupalov.com/docker-shared-permissions/
