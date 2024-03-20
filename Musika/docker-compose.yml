@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   musika-app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: musika-app
     ports:
       - "8888:8888"
@@ -10,11 +12,10 @@ services:
       # - "./notebooks:/usr/src/app/musika"
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
-      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
     deploy:
       resources:
         reservations:
           devices:
             - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+              count: all
+              capabilities: ["gpu"]

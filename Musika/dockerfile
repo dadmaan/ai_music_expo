@@ -21,12 +21,11 @@ COPY requirements_1.txt ./
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements_1.txt
 
-# Make port 8888 available to the world outside this container
-EXPOSE 8888
+# Adding a user to prevent permission problem later and inconsistency
+# src: https://vsupalov.com/docker-shared-permissions/
+RUN useradd -m -d /tf user && \
+     chown -R user /tf && \
+     adduser user sudo && \
+     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-# Define environment variable to ensure that Python outputs are sent straight to terminal without being buffered
-ENV PYTHONUNBUFFERED=1
-
-# Set the default command to execute when creating a new container
-# This command starts the Jupyter Notebook server
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
+USER user
