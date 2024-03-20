@@ -1,0 +1,32 @@
+# Use an official TensorFlow runtime as a parent image, with GPU support
+FROM tensorflow/tensorflow:2.10.0-gpu-jupyter
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Install git and ffmpeg
+RUN apt-get update && \
+    apt-get install -y git ffmpeg && \
+    rm -rf /var/lib/apt/lists/*
+
+# Clone the specified GitHub repository
+RUN git clone https://github.com/marcoppasini/musika.git
+
+# Change the working directory to the cloned repository
+WORKDIR /usr/src/app/musika
+
+# Copy the requirements text into the container
+COPY requirements_1.txt ./
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements_1.txt
+
+# Make port 8888 available to the world outside this container
+EXPOSE 8888
+
+# Define environment variable to ensure that Python outputs are sent straight to terminal without being buffered
+ENV PYTHONUNBUFFERED=1
+
+# Set the default command to execute when creating a new container
+# This command starts the Jupyter Notebook server
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
