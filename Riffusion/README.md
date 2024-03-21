@@ -1,13 +1,17 @@
 # Running Riffusion Locally
 
-You can experiment with [Riffusion](https://riffusion.com/about) model at `riffusion.com`, but you can also play with it on your local machine using the Stable Difussion `AUTOMATIC1111` web UI.
+You can experiment with [Riffusion](https://riffusion.com/about) model at `riffusion.com`, but you can also play with it on your local machine using the original source code or Stable Difussion `AUTOMATIC1111` web UI.
 
-To do so:
+### Source Code
+Follow the instruction [here](https://github.com/riffusion/riffusion) to run the original implementation.
+
+### AUTOMATIC1111
 1. Run following to clone Stable Diffusion WebUI Docker `git clone https://github.com/AbdBarho/stable-diffusion-webui-docker`
 2. Move to the repo. directory and run `docker compose --profile download up --build`
 3. Then run the following to start the AUTOMATIC1111 UI `docker compose --profile auto up --build`
-4. Now, either clone the [sd-webui-riffusion](https://github.com/enlyth/sd-webui-riffusion) inside your /extensions folder, or use the Install from URL functionality in the UI.
-5. For generation, select `Riffusion Audio Generator` script to use riffusion model. You can also convert a whole folder of images to audio in the `Riffusion` tab.
+4. Now, either clone the [sd-webui-riffusion](https://github.com/enlyth/sd-webui-riffusion) inside  `./data/config/auto/extensions` directory, or use the Install from URL functionality in the UI.
+5. Download the model's checkpoints from [here](https://huggingface.co/riffusion/riffusion-model-v1/tree/main) and put them in the `./data/models/Stable-Diffusion` directory.
+6. For generation, select `Riffusion Audio Generator` script to use riffusion model. You can also convert a whole folder of images to audio in the `Riffusion` tab.
 
 ### Notes:
 1. If you received `ERROR: InverseMelScale unexpected argument`, follow the instruction [here](https://github.com/enlyth/sd-webui-riffusion/issues/34).

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  riffusion-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: riffusion
+    ports:
+      - "8501:8501"
+    volumes:
+      - "./repo:/usr/src/app/riffusion"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: ["gpu"]
