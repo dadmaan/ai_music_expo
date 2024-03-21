@@ -3,7 +3,9 @@
 You can experiment with [Riffusion](https://riffusion.com/about) model at `riffusion.com`, but you can also play with it on your local machine using the original source code or Stable Difussion `AUTOMATIC1111` web UI.
 
 ### Source Code
-Follow the instruction [here](https://github.com/riffusion/riffusion) to run the original implementation.
+1. Clone the [Riffusion](https://github.com/riffusion/riffusion) here and rename it to "repo".
+2. Open a terminal and run `docker compose up --build -d`
+3. You can access the Streamlit interface on `localhost:8501` on your browser.
 
 ### AUTOMATIC1111
 1. Run following to clone Stable Diffusion WebUI Docker `git clone https://github.com/AbdBarho/stable-diffusion-webui-docker`

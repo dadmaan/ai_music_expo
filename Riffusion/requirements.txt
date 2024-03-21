@@ -14,4 +14,4 @@ scipy
 soundfile
 sox
 streamlit>=1.18.0
-transformers
+transformers==4.25.1
