@@ -5,7 +5,7 @@ You can experiment with [Riffusion](https://riffusion.com/about) model at `riffu
 To do so:
 1. Run following to clone Stable Diffusion WebUI Docker `git clone https://github.com/AbdBarho/stable-diffusion-webui-docker`
 2. Move to the repo. directory and run `docker compose --profile download up --build`
-3. Then run the following to start the AUTOMATIC1111 UI `docker compose --profile [ui] up --build`
+3. Then run the following to start the AUTOMATIC1111 UI `docker compose --profile auto up --build`
 4. Now, either clone the [sd-webui-riffusion](https://github.com/enlyth/sd-webui-riffusion) inside your /extensions folder, or use the Install from URL functionality in the UI.
 5. For generation, select `Riffusion Audio Generator` script to use riffusion model. You can also convert a whole folder of images to audio in the `Riffusion` tab.
 
