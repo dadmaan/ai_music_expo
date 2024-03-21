@@ -34,3 +34,5 @@ RUN useradd -m -d /tf user && \
      echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 USER user
+
+CMD ["python", "musika_test.py"]
