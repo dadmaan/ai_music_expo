@@ -11,6 +11,4 @@ To do so:
 
 ### Notes:
 1. If you received `ERROR: InverseMelScale unexpected argument`, follow the instruction [here](https://github.com/enlyth/sd-webui-riffusion/issues/34).
-2. If you want to prompt travel in the latent space as described by the authors, install this [extension](https://github.com/Kahsolt/stable-diffusion-webui-prompt-travel).
-
-It will output the results of runs in the `<SD>/outputs/(txt|img)2img-images/prompt_travel/` directory. You can use the convert folder to audio functionality in the `Riffusion` tab to generate a single stitched-together audio file alongside the individual ones.
+2. If you want to prompt travel in the latent space as described by the authors, install this [extension](https://github.com/Kahsolt/stable-diffusion-webui-prompt-travel). It will output the results of runs in the `<SD>/outputs/(txt|img)2img-images/prompt_travel/` directory. You can use the convert folder to audio functionality in the `Riffusion` tab to generate a single stitched-together audio file alongside the individual ones.
