@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  muzic-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: muzic
+    ports:
+      - "8888:8888"
+      - "7861:7861"
+    volumes:
+      - ".:/usr/src/app/muzic"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: ["gpu"]
