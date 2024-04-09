@@ -32,6 +32,7 @@ The repository is structured to include individual folders for each model. Each 
 | SongComposer    |                                                                                                                     |[Link](https://pjlab-songcomposer.github.io)                       |[Link](https://github.com/pjlab-songcomposer/songcomposer)                             |:heavy_check_mark:|                  |
 | Tiny Audio Diffusion |                                                                                                                |                                                                   |[Link](https://github.com/crlandsc/tiny-audio-diffusion)                               |                  |                  |
 
+#### Music Understanding Models
 
 | Model Name      | Interface        | Examples         | Demo/Repo.     |
 |-----------------|:----------------:|:----------------:|:--------------:|
