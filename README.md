@@ -1,3 +1,5 @@
+**Status:** Work in progres...
+
 # AI Music Expo
 Repository dedicated to the exploration and documentation of cutting-edge AI music models. This repository serves as a central hub for music technologists, researchers, composers, and enthusiasts interested in the intersection of artificial intelligence and music creation.
 
