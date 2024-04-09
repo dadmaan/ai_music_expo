@@ -14,13 +14,13 @@ Notes:
 print("CLICK ON LINK BELOW TO OPEN GRADIO INTERFACE")
 if train:
     if self.args.share_gradio:
-        iface.launch(prevent_thread_lock=True, share=True, server_name='0.0.0.0')
+        iface.launch(prevent_thread_lock=True, share=True, server_name='0.0.0.0', server_port=7861)
     else:
-        iface.launch(prevent_thread_lock=True, server_name='0.0.0.0')
+        iface.launch(prevent_thread_lock=True, server_name='0.0.0.0', server_port=7861)
 else:
     if self.args.share_gradio:
-        iface.launch(share=True, server_name='0.0.0.0')
+        iface.launch(share=True, server_name='0.0.0.0', server_port=7861)
     else:
-        iface.launch(server_name='0.0.0.0')
+        iface.launch(server_name='0.0.0.0', server_port=7861)
 ```
 2. See [here](https://huggingface.co/musika) for model checkpoints.

@@ -24,7 +24,7 @@ RUN pip install --no-cache-dir -r requirements_1.txt
 # If necessary, update typing_extensions to a version that includes 'deprecated'
 RUN pip install --no-cache-dir --upgrade typing_extensions
 
-EXPOSE 8888 7860
+EXPOSE 8888 7861
 
 # Adding a user to prevent permission problem later and inconsistency
 # src: https://vsupalov.com/docker-shared-permissions/
