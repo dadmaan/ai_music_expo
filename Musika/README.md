@@ -2,7 +2,7 @@
 
 1. Clone the [Musika](https://github.com/marcoppasini/musika) here and rename it to "repo".
 2. Open a terminal and run `docker compose up --build -d`
-3. You can access the Gradio interface on `localhost:7860` on your browser
+3. You can access the Gradio interface on `localhost:7861` on your browser
 
 #### If you want to run and test other scripts of the Musika
 1. Enter the running container with an interactve bash shell `docker-compose exec musika-notebook /bin/bash`
